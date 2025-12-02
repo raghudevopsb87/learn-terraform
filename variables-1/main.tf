@@ -48,3 +48,11 @@ output "image_ids" {
   value = var.image_ids["a"]
 }
 
+# Not having a default values
+
+variable "input_value1" {
+  type = number
+}
+
+variable "input_value" {}
+
