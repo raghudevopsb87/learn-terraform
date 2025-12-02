@@ -24,6 +24,7 @@ variable "enabled" {
   default	= true
 }
 
+# List
 variable "availability_zones" {
   type 	= list
   default  	= [ "val1", "val2", "val3" ]
@@ -31,5 +32,19 @@ variable "availability_zones" {
 
 output "availability_zones" {
   value = var.availability_zones[0]
+}
+
+# Map
+
+variable "image_ids" {
+  type 	= map
+  default 	= {
+    a = 100,
+    b = "xyz"
+  }
+}
+
+output "image_ids" {
+  value = var.image_ids["a"]
 }
 
