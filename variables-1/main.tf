@@ -54,5 +54,5 @@ variable "input_value1" {
   type = number
 }
 
-variable "input_value" {}
+variable "input_value2" {}
 
