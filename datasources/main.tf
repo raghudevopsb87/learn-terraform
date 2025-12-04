@@ -6,6 +6,14 @@ data "aws_ami" "example" {
   owners = ["973714476881"]
 }
 
+data "aws_security_group" "selected" {
+
+  filter {
+    name   = "name"
+    values = ["allow-all"]
+  }
+
+}
 
 
 output "ami" {
