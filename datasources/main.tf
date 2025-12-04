@@ -9,7 +9,7 @@ data "aws_ami" "example" {
 data "aws_security_group" "selected" {
 
   filter {
-    name   = "name"
+    name   = "group-name"
     values = ["allow-all"]
   }
 
