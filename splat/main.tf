@@ -7,7 +7,17 @@ variable "ports" {
 }
 
 variable "dummy" {
-  default = [20,100,200]
+  default = {
+    apple = {
+      price = 100
+    }
+    banana = {
+      price = 200
+    }
+    citrus = {
+      price = 300
+    }
+  }
 }
 
 output "list" {
@@ -15,6 +25,7 @@ output "list" {
 }
 
 output "mmap" {
-  value = {for x in var.dummy : "x" => x}
+  #value = {for x in var.dummy : "x" => x}
+  value = {for x,y in var.dummy : x => y.price}
 }
 
