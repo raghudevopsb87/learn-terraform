@@ -6,7 +6,15 @@ variable "ports" {
   }
 }
 
+variable "dummy" {
+  default = [20,100,200]
+}
+
 output "list" {
   value = [for x,y in var.ports : y]
+}
+
+output "mmap" {
+  value = {for x in var.dummy : "x" => x}
 }
 
